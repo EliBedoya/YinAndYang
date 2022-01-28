@@ -37,20 +37,24 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scenes\Scripts\Caracters\BlackMovement.cs" />
+     <Compile Include="Assets\Scenes\Scripts\World\WhiteUIControl.cs" />
+     <Compile Include="Assets\Scenes\Scripts\LevelController.cs" />
+     <Compile Include="Assets\Scenes\Scripts\World\Button.cs" />
      <Compile Include="Assets\Scenes\Scripts\World\BlackPortal.cs" />
+     <Compile Include="Assets\Scenes\Scripts\World\WhiteCollectables.cs" />
      <Compile Include="Assets\Scenes\Scripts\Caracters\WhiteMovement.cs" />
+     <Compile Include="Assets\Scenes\Scripts\World\MovingPlatforms\WaypointFollower.cs" />
+     <Compile Include="Assets\Scenes\Scripts\World\BlackCollectables.cs" />
+     <Compile Include="Assets\Scenes\Scripts\World\Doors\BlackDoor.cs" />
+     <Compile Include="Assets\Scenes\Scripts\World\BlackUIControl.cs" />
+     <Compile Include="Assets\Scenes\Scripts\World\TimerUIControl.cs" />
      <Compile Include="Assets\Scenes\Scripts\World\WhitePortal.cs" />
      <Compile Include="Assets\Scenes\Scripts\Caracters\WhiteLife.cs" />
      <Compile Include="Assets\Scenes\Scripts\World\CrumblingPlatform.cs" />
-     <Compile Include="Assets\Scenes\Scripts\Caracters\BlackLife.cs" />
-     <Compile Include="Assets\Scenes\Scripts\World\WhiteUIControl.cs" />
-     <Compile Include="Assets\Scenes\Scripts\World\WhiteCollectables.cs" />
-     <Compile Include="Assets\Scenes\Scripts\World\BlackCollectables.cs" />
-     <Compile Include="Assets\Scenes\Scripts\World\BlackUIControl.cs" />
-     <Compile Include="Assets\Scenes\Scripts\World\TimerUIControl.cs" />
-     <Compile Include="Assets\Scenes\Scripts\LevelController.cs" />
+     <Compile Include="Assets\Scenes\Scripts\World\MovingPlatforms\StickyPlatform.cs" />
      <Compile Include="Assets\Scenes\Scripts\World\Doors\WhiteDoor.cs" />
-     <Compile Include="Assets\Scenes\Scripts\World\Doors\BlackDoor.cs" />
+     <Compile Include="Assets\Scenes\Scripts\Caracters\BlackLife.cs" />
+     <Compile Include="Assets\Scenes\Scripts\FadeIn.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

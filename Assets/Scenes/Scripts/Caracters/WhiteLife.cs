@@ -5,20 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class WhiteLife : MonoBehaviour
 {
-    bool isDead = false;
+    public bool isDead = false;
+    ParticleSystem WhiteExplotion;
+
+    SpriteRenderer WhiteBody;
+
+    WhiteMovement WhiteWalking;
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject child = this.gameObject.transform.GetChild(0).gameObject;
+        WhiteExplotion = child.GetComponent<ParticleSystem>();
+        WhiteBody = GetComponent<SpriteRenderer>();
+        WhiteWalking = GetComponent<WhiteMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isDead == true)
-        {
-            SceneManager.LoadScene("Level1");
-        }
+
     }
     
     void OnCollisionEnter2D(Collision2D col)
@@ -26,6 +31,9 @@ public class WhiteLife : MonoBehaviour
         if (col.gameObject.tag != "Blanco" && col.gameObject.tag != "Player" && col.gameObject.tag != "Wall")
         {
             isDead = true;
+            WhiteBody.enabled = false;
+            WhiteWalking.enabled = false;
+            WhiteExplotion.Play(true);
         }
     }
     
