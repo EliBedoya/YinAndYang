@@ -12,9 +12,4 @@ public class Button : MonoBehaviour
         portalOn.SetActive(true);
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        portalOn.SetActive(false);
-    }
-
 }
