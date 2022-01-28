@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CrumblingPlatform : MonoBehaviour
 {
-    [SerializeField] float timer=2;
+    [SerializeField] float timer=1;
     Rigidbody2D crumblingPlatformRB;
     bool collision = false;
 
