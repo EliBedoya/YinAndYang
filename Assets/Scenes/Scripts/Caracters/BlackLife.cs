@@ -5,22 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class BlackLife : MonoBehaviour
 {
-    bool isDead = false;
+    public bool isDead = false;
+    ParticleSystem BlackExplotion;
+
+    SpriteRenderer BlackBody;
+
+    BlackMovement BlackWalking;
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject child = this.gameObject.transform.GetChild(0).gameObject;
+        BlackExplotion = child.GetComponent<ParticleSystem>();
+        BlackBody = GetComponent<SpriteRenderer>();
+        BlackWalking = GetComponent<BlackMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isDead == true)
-        {
-            Scene scene = SceneManager.GetActiveScene(); 
-            SceneManager.LoadScene(scene.name);
-;
-        }
+     
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -28,7 +31,13 @@ public class BlackLife : MonoBehaviour
         if (col.gameObject.tag != "Negro" && col.gameObject.tag != "Player" && col.gameObject.tag != "Wall")
         {
             isDead = true;
+            BlackBody.enabled = false;
+            BlackWalking.enabled = false;
+            BlackExplotion.Play(true);
         }
+
+        
+
     }
 
 }
