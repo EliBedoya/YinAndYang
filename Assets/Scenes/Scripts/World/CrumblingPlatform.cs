@@ -7,6 +7,7 @@ public class CrumblingPlatform : MonoBehaviour
     [SerializeField] float timer=1;
     Rigidbody2D crumblingPlatformRB;
     bool collision = false;
+    private float _time;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,10 @@ public class CrumblingPlatform : MonoBehaviour
         if (collision == true)
         {
             timer -= Time.deltaTime;
+            _time =+ timer;
+
+            Destroy(gameObject,_time);
+
         }
 
         if (timer <= 0)
@@ -37,6 +42,7 @@ public class CrumblingPlatform : MonoBehaviour
         {
             Debug.Log ("colisioné");
             collision = true;
+            
             
         }
     }

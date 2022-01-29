@@ -6,6 +6,8 @@ public class WhitePortal : MonoBehaviour
 {
     Transform Portal;
     Transform White;
+    [SerializeField] private AudioSource WhitePortalSound;
+    private float _time;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,9 @@ public class WhitePortal : MonoBehaviour
         if (collision.transform == White)
         {
             White.position = Portal.position;
-            Destroy(gameObject);
+            _time = WhitePortalSound.clip.length;
+            WhitePortalSound.Play();
+            Destroy(gameObject,_time);
         }
     
     }

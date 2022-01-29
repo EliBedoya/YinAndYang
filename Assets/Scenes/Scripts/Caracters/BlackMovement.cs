@@ -8,6 +8,8 @@ public class BlackMovement : MonoBehaviour
     [SerializeField] float jumpForce;
     Rigidbody2D rb;
     public LayerMask groundLayer;
+    [SerializeField]
+    private AudioSource SoundJump;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +25,8 @@ public class BlackMovement : MonoBehaviour
         rb.velocity = new Vector2 (blackXdir*speed, rb.velocity.y);
 
         if (Input.GetKey(KeyCode.UpArrow) && IsGrounded()) 
-        {rb.velocity = new Vector2 (rb.velocity.x,jumpForce);}
+        {rb.velocity = new Vector2 (rb.velocity.x,jumpForce);
+        SoundJump.Play();}
         
     }
 

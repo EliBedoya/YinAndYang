@@ -11,6 +11,8 @@ public class BlackLife : MonoBehaviour
     SpriteRenderer BlackBody;
 
     BlackMovement BlackWalking;
+    [SerializeField] 
+    private AudioSource DeathBlackSound ;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +32,13 @@ public class BlackLife : MonoBehaviour
     {
         if (col.gameObject.tag != "Negro" && col.gameObject.tag != "Player" && col.gameObject.tag != "Wall")
         {
+            
+            DeathBlackSound.Play();
             isDead = true;
             BlackBody.enabled = false;
             BlackWalking.enabled = false;
             BlackExplotion.Play(true);
+            
         }
 
         
