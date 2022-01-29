@@ -38,11 +38,6 @@ public class TimerUIControl : MonoBehaviour
             sec -= Time.deltaTime;
         }
 
-        if (sec <= 0 && min <= 0)
-        {
-            SceneManager.LoadScene("Level1");
-        }
-
 
         if (sec <= 0)
         {
@@ -53,6 +48,10 @@ public class TimerUIControl : MonoBehaviour
             sec = 59;
         }
 
+        if (sec <= 0 && min <= 0)
+        {
+            SceneManager.LoadScene("Level1");
+        }
     }
     
 }

@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class WhitePortal : MonoBehaviour
 {
-    Transform Portal;
-    Transform White;
+    [SerializeField] Transform [] Portal;
+    [SerializeField] Transform White;
 
     // Start is called before the first frame update
     void Start()
     {
-       White = GameObject.Find("White").GetComponent<Transform>();
-       GameObject child = this.gameObject.transform.GetChild(0).gameObject;
-       Portal = child.transform;
+       
     }
 
     // Update is called once per frame
@@ -25,7 +23,7 @@ public class WhitePortal : MonoBehaviour
     {
         if (collision.transform == White)
         {
-            White.position = Portal.position;
+            White.position = Portal[1].position;
             Destroy(gameObject);
         }
     
