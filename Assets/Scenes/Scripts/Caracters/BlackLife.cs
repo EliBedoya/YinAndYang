@@ -25,7 +25,11 @@ public class BlackLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+        if (isDead == true)
+        {
+            Scene scene = SceneManager.GetActiveScene(); 
+            SceneManager.LoadScene(scene.name);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
