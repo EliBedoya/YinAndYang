@@ -11,6 +11,8 @@ public class BlackLife : MonoBehaviour
     SpriteRenderer BlackBody;
 
     BlackMovement BlackWalking;
+    [SerializeField] 
+    private AudioSource DeathBlackSound ;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,17 +25,24 @@ public class BlackLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+        if (isDead == true)
+        {
+            Scene scene = SceneManager.GetActiveScene(); 
+            SceneManager.LoadScene(scene.name);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag != "Negro" && col.gameObject.tag != "Player" && col.gameObject.tag != "Wall")
         {
+            
+            DeathBlackSound.Play();
             isDead = true;
             BlackBody.enabled = false;
             BlackWalking.enabled = false;
             BlackExplotion.Play(true);
+            
         }
 
         

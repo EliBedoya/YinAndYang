@@ -40,7 +40,9 @@ public class TimerUIControl : MonoBehaviour
 
         if (sec <= 0 && min <= 0)
         {
-            SceneManager.LoadScene("Level1");
+            Scene scene = SceneManager.GetActiveScene(); 
+            SceneManager.LoadScene(scene.name);
+            //SceneManager.LoadScene("Level1");
         }
 
 

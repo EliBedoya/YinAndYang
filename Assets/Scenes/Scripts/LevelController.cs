@@ -14,10 +14,11 @@ public class LevelController : MonoBehaviour
     [SerializeField]string level;
 
     [SerializeField] Animator [] doors;
+    [SerializeField] private AudioSource backgroundSound;
     // Start is called before the first frame update
     void Start()
     {
-        
+        backgroundSound.Play();
     }
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class LevelController : MonoBehaviour
         if (blackOnDoor == true && whiteOnDoor == true)
         {
             SceneManager.LoadScene(level);
+
         }
     }
 }

@@ -6,8 +6,10 @@ public class WaypointFollower : MonoBehaviour
 {
     //Array in case I need several waypoints
     [SerializeField] private GameObject[] waypoints;
+    [SerializeField] float timer=10000;
     private int currentWaypointIndex = 0;
     bool collision = false;
+    private float _time;
 
     [SerializeField] private float speed = 0.5f;
         
@@ -15,6 +17,10 @@ public class WaypointFollower : MonoBehaviour
     {
         if(collision == true)
         {
+            timer -= Time.deltaTime;
+            _time =+ timer;
+
+            Destroy(gameObject,_time);
         if(Vector2.Distance(waypoints[currentWaypointIndex].transform.position, transform.position) < .1f)
         {
             if(currentWaypointIndex <= waypoints.Length)
