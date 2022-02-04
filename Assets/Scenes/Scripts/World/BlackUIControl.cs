@@ -23,7 +23,7 @@ public class BlackUIControl : MonoBehaviour
     {
         counterText.text = counter.ToString();
 
-        if (counter == counterLimit)
+        if (counter >= counterLimit)
         {
             levelC.blackReday=true;
         }

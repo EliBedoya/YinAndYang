@@ -23,7 +23,7 @@ public class WhiteUIControl : MonoBehaviour
     {
         counterText.text = counter.ToString();
 
-        if (counter == counterLimit)
+        if (counter >= counterLimit)
         {
             levelC.whiteReady=true;
         }
