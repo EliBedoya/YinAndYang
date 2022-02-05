@@ -11,3 +11,7 @@ Link al juego: https://elbedoyaga.itch.io/the-impossible-game
 
 Imágenes de referencia:
 ![Image text](https://github.com/EliBedoya/YinAndYang/blob/main/escenas/inicio.jpeg)
+![Image text](https://github.com/EliBedoya/YinAndYang/blob/main/escenas/level1.jpeg)
+![Image text](https://github.com/EliBedoya/YinAndYang/blob/main/escenas/level2.jpeg)
+![Image text](https://github.com/EliBedoya/YinAndYang/blob/main/escenas/level3.jpeg)
+![Image text](https://github.com/EliBedoya/YinAndYang/blob/main/escenas/end.jpeg)
