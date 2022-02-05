@@ -8,3 +8,6 @@ La mecánica del juego es bastnte simple, hay dos personajes, uno controlado por
 
 
 Link al juego: https://elbedoyaga.itch.io/the-impossible-game
+
+Imágenes de referencia:
+![Image text](https://github.com/EliBedoya/YinAndYang/blob/main/escenas/inicio.jpeg)
