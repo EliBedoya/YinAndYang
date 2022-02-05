@@ -14,4 +14,4 @@ Imágenes de referencia:
 ![Image text](https://github.com/EliBedoya/YinAndYang/blob/main/escenas/level1.jpeg)
 ![Image text](https://github.com/EliBedoya/YinAndYang/blob/main/escenas/level2.jpeg)
 ![Image text](https://github.com/EliBedoya/YinAndYang/blob/main/escenas/level3.jpeg)
-![Image text](https://github.com/EliBedoya/YinAndYang/blob/main/escenas/end.jpeg)
+![Image text](https://github.com/EliBedoya/YinAndYang/blob/main/escenas/End.jpeg)
